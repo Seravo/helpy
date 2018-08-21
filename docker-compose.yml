@@ -17,7 +17,7 @@ services:
     depends_on:
       - helpy
   helpy:
-    image: helpy/helpy
+    image: helpy/local
     restart: always
     networks:
       - front

@@ -40,4 +40,6 @@ VOLUME $HELPY_HOME/public
 COPY docker/database.yml $HELPY_HOME/config/database.yml
 COPY docker/run.sh $HELPY_HOME/run.sh
 
+
+COPY ./app $HELPY_HOME/app 
 CMD ["./run.sh"]
