@@ -127,6 +127,26 @@
             tabMode: 'indent'
           },
           callbacks: {
+            onApplyCustomStyle: function($target, context, onFormatBlock) {
+              var className = $target.data('option');
+        
+              if (className) {
+                var selection = window.getSelection();
+                var selected = (selection.rangeCount > 0) && selection.getRangeAt(0);
+        
+                if (selected) {
+                  var tag = $target.data('value');
+        
+                  var $customElement = $(document.createElement(tag)).addClass(className);
+        
+                  selected = selected.startContainer.parentNode;
+                  $(selected).wrap($customElement);
+                }
+              } else {
+                // standard behavior for default styles
+                onFormatBlock($target.prop('tagName'));
+              }
+            },
             onImageUpload: function(files) {
               return Helpy.sendFile(files[0], $(this));
             },
