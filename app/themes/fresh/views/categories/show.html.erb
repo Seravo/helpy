@@ -21,16 +21,19 @@
   </div>
 
   <div id="category-col" class="col-md-9 col-sm-12 col-xs-12">
-    <ul class='list-unstyled'>
-      <% @docs.each do |doc| %>
+    <ul class="list-unstyled" id="accordion">
+      <% @docs.each_with_index do |doc, idx| %>
       <li class="article less-important">
         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <%= link_to doc.title, category_doc_path(doc.category, doc) %>
+        <a data-toggle="collapse" data-parent="#accordion" data-target="#article-<%= idx %>"><%= doc.title %></a>
 
         <% doc_tag_listing(doc.tag_list, "doc") %>
         <% if doc.posts.count > 0 %>
           <i class="glyphicon glyphicon-comment" style="font-size:11px;color:#eee;" title="<%= doc.posts.count %>"></i>
         <% end %>
+        <div id="article-<%= idx %>" class="collapse">
+          <%= sanitize_doc_content(doc.content) %>
+        </div>
       </li>
       <% end %>
       <% if @docs.count == 0 %>
