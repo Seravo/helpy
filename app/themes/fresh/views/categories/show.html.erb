@@ -32,6 +32,8 @@
           <i class="glyphicon glyphicon-comment" style="font-size:11px;color:#eee;" title="<%= doc.posts.count %>"></i>
         <% end %>
         <div id="article-<%= idx %>" class="collapse">
+          <span class="glyphicon glypicon-chevron-right" aria-hidden="true"></span>
+          <%= link_to I18n.t('view_on_site', default: "View on Site"), doc_path(doc) %>
           <%= sanitize_doc_content(doc.content) %>
         </div>
       </li>
