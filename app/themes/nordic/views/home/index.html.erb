@@ -10,18 +10,14 @@
 <div class="faq-grid">
   <h2 class="text-center space-h2">Frequently Asked Questions</h2>
   <div class="grid-row">
-    <% @categories.each do |category| %>
-      <% puts("@categories.each do") %>
-      <% category.docs.with_translations(I18n.locale).ordered.active.where(keywords: 'faq').each_with_index do |doc| %>
-        <%= render ("docs/doc"), doc: doc -%>
-      <% end %>
-    <% end %>
     <div class="grid-column">
       <ul class='list-unstyled articles'>
-      </ul>
-    </div>
-    <div class="grid-column">
-      <ul class='list-unstyled articles'>
+        <% @categories.each do |category| %>
+          <% puts("Left: @categories.each do") %>
+          <% category.docs.with_translations(I18n.locale).ordered.active.where(keywords: 'faq').each_with_index do |doc| %>
+            <%= render ("docs/doc"), doc: doc -%>
+          <% end %>
+        <% end %>
       </ul>
     </div>
   </div>
