@@ -15,6 +15,7 @@
 #  permalink        :string
 #  version          :integer
 #  front_page       :boolean          default(FALSE)
+#  faq_grid         :boolean          default(FALSE)
 #  cheatsheet       :boolean          default(FALSE)
 #  points           :integer          default(0)
 #  created_at       :datetime         not null

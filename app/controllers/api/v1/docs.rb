@@ -41,6 +41,7 @@ module API
           optional :meta_description, type: String, desc: "A short description for SEO and internal purposes"
           optional :rank, type: Integer, desc: "The rank can be used to determine the ordering of docs"
           optional :front_page, type: Boolean, desc: "Whether or not the doc should appear on the front page"
+          optional :faq_grid, type: Boolean, desc: "Whether or not the doc should appear on the FAQ-grid"
           optional :active, type: Boolean, desc: "Whether or not the doc is live on the site"
         end
         post "", root: :docs do
@@ -54,6 +55,7 @@ module API
             meta_description: permitted_params[:meta_description],
             rank: permitted_params[:rank],
             front_page: permitted_params[:front_page],
+            faq_grid: permitted_params[:faq_grid],
             active: permitted_params[:active]
           )
           present doc, with: Entity::Doc
@@ -75,6 +77,7 @@ module API
           optional :meta_description, type: String, desc: "A short description for SEO and internal purposes"
           optional :rank, type: Integer, desc: "The rank can be used to determine the ordering of docs"
           optional :front_page, type: Boolean, desc: "Whether or not the doc should appear on the front page"
+          optional :faq_grid, type: Boolean, desc: "Whether or not the doc should appear on the FAQ-grid"
           optional :active, type: Boolean, desc: "Whether or not the doc is live on the site"
         end
         patch ":id", root: :docs do
@@ -89,6 +92,7 @@ module API
             meta_description: permitted_params[:meta_description],
             rank: permitted_params[:rank],
             front_page: permitted_params[:front_page],
+            faq_grid: permitted_params[:faq_grid],
             active: permitted_params[:active]
           )
           present doc, with: Entity::Doc
