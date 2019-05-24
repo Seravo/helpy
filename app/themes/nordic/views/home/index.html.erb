@@ -9,17 +9,15 @@
 
 <div class="faq-grid">
   <h2 class="text-center space-h2"><%= "Frequently Asked Questions"%></h2>
-  <div class="grid-row">
-    <div class="grid-column">
-      <ul class='list-unstyled articles'>
-        <% @categories.each do |category| %>
-          <% puts("Left: @categories.each do") %>
-          <% category.docs.with_translations(I18n.locale).ordered.active.tagged_with('faq').each_with_index do |doc| %>
-            <%= render ("docs/doc"), doc: doc -%>
-          <% end %>
+  <div class="grid-column">
+    <ul class='list-unstyled articles'>
+      <% @categories.each do |category| %>
+        <% puts("Left: @categories.each do") %>
+        <% category.docs.with_translations(I18n.locale).ordered.active.tagged_with('faq').each_with_index do |doc| %>
+          <%= render ("docs/doc"), doc: doc -%>
         <% end %>
-      </ul>
-    </div>
+      <% end %>
+    </ul>
   </div>
 </div>
 

@@ -558,15 +558,11 @@ span.category-icon {
   margin-top: 40px;
 }
 
-.faq-grid {
-
-}
-
 .grid-row {
   margin-bottom: 10px;
 }
 
-@media (min-width: 760px) {
+@media (min-width: 1200px) {
   .grid-column {
     -webkit-column-count: 2;
     -moz-column-count: 2;
@@ -578,7 +574,7 @@ span.category-icon {
     page-break-inside: avoid;
     break-inside: avoid;
 
-    word-wrap: break-spaces;
+    word-wrap: break-word;
   }
 }
 
