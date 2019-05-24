@@ -14,7 +14,7 @@
       <ul class='list-unstyled articles'>
         <% @categories.each do |category| %>
           <% puts("Left: @categories.each do") %>
-          <% category.docs.with_translations(I18n.locale).ordered.active.where(keywords: 'faq').each_with_index do |doc| %>
+          <% category.docs.with_translations(I18n.locale).ordered.active.tagged_with('faq').each_with_index do |doc| %>
             <%= render ("docs/doc"), doc: doc -%>
           <% end %>
         <% end %>
