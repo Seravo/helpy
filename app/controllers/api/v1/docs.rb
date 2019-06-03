@@ -79,6 +79,7 @@ module API
           optional :front_page, type: Boolean, desc: "Whether or not the doc should appear on the front page"
           optional :faq_grid, type: Boolean, desc: "Whether or not the doc should appear on the FAQ-grid"
           optional :active, type: Boolean, desc: "Whether or not the doc is live on the site"
+          optional :updated_by, type: Integer, desc: "Updated by user"
         end
         patch ":id", root: :docs do
           doc = Doc.find(permitted_params[:id])

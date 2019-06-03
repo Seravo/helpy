@@ -37,6 +37,7 @@ class Admin::DocsController < Admin::BaseController
       I18n.locale = params['lang']
     end
     @doc = Doc.where(id: params[:id]).first
+    @doc.updated_by = current_user.id
     @category = @doc.category
     # @doc.tag_list = params[:doc][:tag_list]
     if @doc.update_attributes(doc_params)
