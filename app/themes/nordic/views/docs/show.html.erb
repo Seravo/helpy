@@ -43,10 +43,6 @@
           <%= @doc.user.name.titleize %>
         </div>
       </div>
-      <div id="doc-tags" class="doc-meta">
-        <div class="more-important meta-header"><%= I18n.t("tagged", default: "Tagged") %>:</div>
-        <div class="more-important meta-header"><% tag_listing(@doc.tag_list, "doc") %></div>
-      </div>
     </div>
     <div class="col-md-9 text-content">
     <%= sanitize_doc_content(@doc.content) %>
