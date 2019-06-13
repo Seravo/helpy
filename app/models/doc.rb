@@ -10,6 +10,7 @@
 #  meta_description :string
 #  category_id      :integer
 #  user_id          :integer
+#  updater_id       :integer
 #  active           :boolean          default(TRUE)
 #  rank             :integer
 #  permalink        :string
@@ -22,6 +23,7 @@
 #  topics_count     :integer          default(0)
 #  allow_comments   :boolean          default(TRUE)
 #  attachments      :string           default([]), is an Array
+#  updater_id       :integer
 #
 
 class Doc < ActiveRecord::Base
@@ -32,6 +34,7 @@ class Doc < ActiveRecord::Base
   belongs_to :user
   has_many :votes, as: :voteable
   has_one :topic
+  has_one :updater, as: :updater_id
   has_many :posts, through: :topic
   has_many :doc_translations
 

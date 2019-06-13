@@ -24,7 +24,6 @@ class Admin::DocsController < Admin::BaseController
   def create
     @doc = Doc.new(doc_params)
     @doc.user_id = current_user.id
-    @doc.updater_id = current_user.id
     if @doc.save
       flash[:notice] = t(:model_created, default: "%{object_name} was saved", object_name: @doc.title)
       redirect_to(admin_category_path(@doc.category.id))
@@ -38,7 +37,7 @@ class Admin::DocsController < Admin::BaseController
       I18n.locale = params['lang']
     end
     @doc = Doc.where(id: params[:id]).first
-    @doc.updater_id = current_user.id
+    @doc.user_id = current_user.id
     @category = @doc.category
     # @doc.tag_list = params[:doc][:tag_list]
     if @doc.update_attributes(doc_params)

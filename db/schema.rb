@@ -126,6 +126,7 @@ ActiveRecord::Schema.define(version: 20190513145733) do
     t.integer  "topics_count",     default: 0
     t.boolean  "allow_comments",   default: true
     t.string   "attachments",      default: [],                 array: true
+    t.integer "updated_by"
   end
 
   create_table "flags", force: :cascade do |t|

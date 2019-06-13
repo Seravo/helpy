@@ -76,6 +76,7 @@ module API
           optional :rank, type: Integer, desc: "The rank can be used to determine the ordering of docs"
           optional :front_page, type: Boolean, desc: "Whether or not the doc should appear on the front page"
           optional :active, type: Boolean, desc: "Whether or not the doc is live on the site"
+          optional :updated_by, type: Integer, desc: "Updated by user"
         end
         patch ":id", root: :docs do
           doc = Doc.find(permitted_params[:id])
