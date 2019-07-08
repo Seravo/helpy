@@ -166,6 +166,7 @@ class Topic < ActiveRecord::Base
     Post.bulk_insert values: post_attributes
     all.each do |t|
       t.team_list = assigned_group
+      t.current_status = 'pending'
       t.save
     end
   end
