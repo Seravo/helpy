@@ -77,7 +77,7 @@ class Post < ActiveRecord::Base
     unless status == 'trash'
       logger.info('private message, update waiting on cache')
       status = self.topic.current_status
-      if self.user && self.user.is_agent?
+      if self.kind != 'note' && self.user && self.user.is_agent?
         logger.info('waiting on user')
         waiting_on = "user"
         status = "open"
