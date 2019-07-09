@@ -106,6 +106,7 @@ Helpy.initShortcuts = function() {
   // s r - mark resolved
   // s o - reopen
   // s n - mark new
+  // s p - mark pending
   // s s - mark spam
   // s t - mark trash
 
@@ -117,6 +118,9 @@ Helpy.initShortcuts = function() {
   });
   Mousetrap.bind('s n', function() {
     $('.key-sn').click();
+  });
+  Mousetrap.bind('s p', function() {
+    $('.key-sp').click();
   });
   Mousetrap.bind('s s', function() {
     $('.key-ss').click();

@@ -167,6 +167,7 @@ en:
   mark_closed: Mark Closed/Resolved
   reopen: Reopen
   mark_spam: Mark Spam
+  mark_pending: Mark Pending
   mark_new: Mark New
   assign_agent: &assign_agent Assign Agent
   tag_with: &tag_with  Tag Ticket
@@ -180,6 +181,7 @@ en:
 
   # Discussion messages
   new_message: "This ticket has been marked new by the support staff"
+  pending_message: "This ticket has been marked pending by the support staff"
   spam_message: "This ticket has been marked spam by the support staff"
   reopen_message: "This ticket has been reopened by the support staff"
   closed_message: "This ticket has been closed by the support staff."

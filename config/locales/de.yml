@@ -166,6 +166,7 @@ de:
   mark_closed: Als gelöst markieren
   reopen: Erneut öffnen
   mark_spam: Als Spam markieren
+  mark_pending: Als In Bearbeitung markieren
   mark_new: Als Neu markieren
   assign_agent: &assign_agent Agent zuordnen
   tag_with: &tag_with Etikett Ticket
@@ -176,6 +177,7 @@ de:
 
   # Discussion messages
   new_message: "Dieses Ticket wurde vom Supportpersonal als neu markiert"
+  pending_message: "Dieses Ticket wurde vom Supportpersonal als In Bearbeitung markiert"
   spam_message: "Dieses Ticket wurde vom Supportpersonal als Spam markiert."
   reopen_message: "Dieses Ticket wurde erneut durch einen Support-Mitarbeiter geöffnet."
   closed_message: "Dieses Ticket wurde durch einen Support-Mitarbeiter geschlossen."

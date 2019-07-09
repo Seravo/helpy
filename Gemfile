@@ -168,7 +168,6 @@ group :development, :test do
   gem 'rubocop'
   gem 'scss-lint'
   gem 'awesome_print'
-  gem 'rb-readline'
 end
 
 gem 'bulk_insert'

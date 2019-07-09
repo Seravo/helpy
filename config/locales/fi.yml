@@ -165,6 +165,7 @@ fi:
   mark_closed: Merkitse ratkaistuksi
   reopen: Avaa uudelleen
   mark_spam: Merkitse roskapostiksi
+  mark_pending: Merkitse odottavaksi
   mark_new: Merkitse uudeksi
   assign_agent: &assign_agent Osoita henkilölle
   tag_with: &tag_with Merkitse palvelupyyntö
@@ -175,6 +176,7 @@ fi:
 
   # Discussion messages
   new_message: "Tämä palvelupyyntö on merkitty uudesi tuen toimesta"
+  pending_message: "Tämä palvelupyyntö on merkitty odottavaksi tuen toimesta"
   spam_message: "Tämä palvelupyyntö on merkitty roskapostiksi tuen toimesta"
   reopen_message: "Tämä palvelupyyntö on avattu uudelleen tuen toimesta."
   closed_message: "Tämä palvelupyyntö on suljettu tuen toimesta."

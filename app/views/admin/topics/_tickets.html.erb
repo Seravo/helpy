@@ -52,6 +52,7 @@
               <li><%= link_to t(:mark_closed, default: 'Mark Closed'), admin_update_topic_path(change_status: 'closed', status: params[:status], q: params[:q]), :remote => true, class: 'multiple-update'  %></li>
               <li><%= link_to t(:reopen, default: 'Reopen'), admin_update_topic_path(change_status: 'reopen', status: params[:status], q: params[:q]), :remote => true, class: 'multiple-update'  %></li>
               <li><%= link_to t(:mark_new, default: 'Mark New'), admin_update_topic_path(change_status: 'new', status: params[:status], q: params[:q]), :remote => true, class: 'multiple-update'  %></li>
+              <li><%= link_to t(:mark_pending, default: 'Mark Pending'), admin_update_topic_path(change_status: 'pending', status: params[:status]), :remote => true, class: 'multiple-update' %></li>
               <li><%= link_to t(:mark_spam, default: 'Mark Spam'), admin_update_topic_path(change_status: 'spam', status: params[:status], q: params[:q]), :remote => true, class: 'multiple-update'  %></li>
               <li><%= link_to t(:trash, default: 'Trash'), admin_update_topic_path(change_status: 'trash', status: params[:status], q: params[:q]), :remote => true, class:'multiple-update' %></li>
             </ul>

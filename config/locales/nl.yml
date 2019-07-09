@@ -142,6 +142,7 @@ nl:
   status: &status Status
   mark_closed: Als opgelost markeren
   reopen: Heropenen
+  mark_pending: Als wachtend markeren
   mark_spam: Als spam markeren
   mark_new: Als nieuw markeren
   assign_agent: &assign_agent Aan medewerker toewijzen

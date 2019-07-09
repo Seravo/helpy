@@ -24,6 +24,7 @@
     <li><%= link_to t(:mark_closed, default: 'Mark Closed'), admin_update_topic_path(topic_ids: { "":@topic.id }, change_status: 'closed', status: @status), :remote => true, class: 'key-sr' unless @topic.current_status == "closed" %></li>
     <li><%= link_to t(:reopen, default: 'Reopen'), admin_update_topic_path(topic_ids: { "":@topic.id }, change_status: 'reopen', status: @status), :remote => true, class: 'key-so' unless @topic.current_status == "open" %></li>
     <li><%= link_to t(:mark_new, default: 'Mark New'), admin_update_topic_path(topic_ids: { "":@topic.id }, change_status: 'new', status: @status), :remote => true, class: 'key-sn' unless @topic.current_status == "new" %></li>
+    <li><%= link_to t(:mark_pending, default: 'Mark Pending'), admin_update_topic_path(topic_ids: { "":@topic.id }, change_status: 'pending', status: @status), :remote => true, class: 'key-sp' unless @topic.current_status == "pending" %></li>
     <li><%= link_to t(:mark_spam, default: 'Mark Spam'), admin_update_topic_path(topic_ids: { "":@topic.id }, change_status: 'spam', status: @status), :remote => true, class: 'key-ss' unless @topic.current_status == "spam" %></li>
     <li><%= link_to t(:trash, default: 'Trash'), admin_update_topic_path(topic_ids: { "":@topic.id }, change_status: 'trash', status: @status), :remote => true, class: 'key-st' unless @topic.current_status == "trash" %></li>
   </ul>
